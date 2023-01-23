@@ -1,0 +1,15 @@
+{
+  "name": "playwrightcodeceptjs",
+  "version": "1.0.0",
+  "description": "testar framework de testes automatizados",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx codeceptjs run --steps"
+  },
+  "author": "lucas",
+  "license": "ISC",
+  "dependencies": {
+    "codeceptjs": "^3.3.7",
+    "playwright": "^1.29.2"
+  }
+}
