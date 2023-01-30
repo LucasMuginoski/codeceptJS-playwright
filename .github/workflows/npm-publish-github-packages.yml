@@ -1,19 +1,14 @@
 name: Node.js CI
 
-on: [push, pull_request]
+on: push
 
 jobs:
-  build:
-
+  codeceptjs:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [13.x]
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: actions/setup-node@v1
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
