@@ -14,7 +14,7 @@ Scenario('Login com sucesso',  ({ I }) => {
     I.waitForText('Login realizado', '10');
     I.click('.swal2-actions button.swal2-confirm');
     I.waitForElement('section .dashboard_tab_button');
-});
+}).tag('@sucesso');
 
 Scenario('Tentando logar apenas com email',  ({ I }) => {
 
@@ -25,7 +25,7 @@ Scenario('Tentando logar apenas com email',  ({ I }) => {
     I.click('.login_submit button[type="submit"]');
 
     I.waitForText('Senha inválida.', '10');
-});
+}).tag('@email');
 
 Scenario('Tentando logar sem enviar email e senha',  ({ I }) => {
 
@@ -35,7 +35,7 @@ Scenario('Tentando logar sem enviar email e senha',  ({ I }) => {
     I.click('.login_submit button[type="submit"]');
     I.waitForText('E-mail inválido.','10');
     //I.waitForText('Senha inválida.', '10');
-});
+}).tag('@dados');
 
 Scenario('Tentando logar apenas com senha',  ({ I }) => {
 
@@ -47,4 +47,4 @@ Scenario('Tentando logar apenas com senha',  ({ I }) => {
     I.click('.login_submit button[type="submit"]');
     I.click('.login_submit button[type="submit"]');
     I.waitForText('E-mail inválido.','10');
-});
+}).tag('@senha');
